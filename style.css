@@ -1,0 +1,78 @@
+/**Sections to add/fix:
+- container for body of site
+- row: we're going to have 3 within the container
+- product 
+- thing to hold search bar
+- thing to hold logo
+**/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /**fonts can go here, replace later**/
+
+body {
+    background: #fcf5ef;
+    margin: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    height: 100px;
+    padding: 0px 5%;
+    background-color: rgb(238, 193, 95);
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .navbar a {/**directory in navbar (home, products, etc)**/
+    float: right;
+    color: rgb(219, 179, 70);
+    text-align: center;
+    font-size: 16px;
+    padding: 14px 17px;
+    text-decoration: none;
+  }
+
+  .title {
+      float: left;
+      font-size: 40px;
+      text-align: center;
+      padding: 14px 16px;
+  }
+
+.body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.container { /**main one that holds all the subcontainers**/
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding: 40px;
+    
+}
+
+.container2 { /**holds projects and overlay**/
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+@media only screen and (max-width:620px) {
+    /* this makes the site responsive/readable on phones */
+    .container {
+        flex-direction: column;
+        left: 0;
+        right: 0;
+    }
+
+    .column1 {
+        width: 100%;
+      }
+      
+}
